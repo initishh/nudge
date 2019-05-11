@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NudgeRewriten</string>
+    <string name="search_hint_farmer_list">Search for farmers...</string>
 </resources>
