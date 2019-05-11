@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">NudgeRewriten</string>
     <string name="search_hint_farmer_list">Search for farmers...</string>
+    <string name="login_preference">com.example.nudgerewriten.login_preference</string>
+    <string name="login_status">com.example.nudgerewriten.login_status</string>
 </resources>
