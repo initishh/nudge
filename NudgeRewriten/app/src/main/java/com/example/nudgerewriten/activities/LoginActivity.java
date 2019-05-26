@@ -1,21 +1,20 @@
-package com.example.nudgerewriten;
+package com.example.nudgerewriten.activities;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.nudgerewriten.R;
+import com.example.nudgerewriten.utils.SharedPrefUtils;
 
 public class LoginActivity extends AppCompatActivity {
 
-    public static final String SHARED_PREFS = "sharedPrefs";
-    public static final String TEXT = "text";
     private EditText licencecode;
-    public Shared shared;
+    public SharedPrefUtils sharedPrefUtils;
+
     private final TextWatcher mTextEditorWatcher = new TextWatcher() {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
         }
@@ -30,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
-                shared.writeLoginStatus(true);
+                sharedPrefUtils.writeLoginStatus(true);
 
             }
         }
@@ -41,13 +40,17 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        shared = new Shared(getApplicationContext());
-        if (shared.readLoginStatus()) {
+
+        sharedPrefUtils = new SharedPrefUtils(getApplicationContext());
+
+        if (sharedPrefUtils.readLoginStatus()) {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
 
+            //Finishes activity after login
+            finish();
         } else {
-            licencecode = (EditText) findViewById(R.id.licenceCode);
+            licencecode = findViewById(R.id.edit_text_license_code);
             licencecode.addTextChangedListener(mTextEditorWatcher);
         }
     }

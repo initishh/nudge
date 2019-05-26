@@ -1,9 +1,12 @@
-package com.example.nudgerewriten;
+package com.example.nudgerewriten.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.nudgerewriten.R;
+import com.example.nudgerewriten.utils.Constants;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
@@ -19,7 +22,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },3000);
+        }, Constants.SPLASH_SCREEN_TIME_OUT_IN_MILLIS);
 
     }
     }

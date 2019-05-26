@@ -1,4 +1,4 @@
-package com.example.nudgerewriten;
+package com.example.nudgerewriten.activities;
 
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -6,6 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.support.design.widget.BottomNavigationView;
+
+import com.example.nudgerewriten.R;
+import com.example.nudgerewriten.fragments.CropAndMarketFragment;
+import com.example.nudgerewriten.fragments.FarmerListFragment;
+import com.example.nudgerewriten.fragments.HomeFragment;
+import com.example.nudgerewriten.fragments.ProfileFragment;
+import com.example.nudgerewriten.fragments.ServicesFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         BottomNavigationView botNav = findViewById(R.id.bottom_navigation);
         botNav.setOnNavigationItemSelectedListener(navlistener);
+
+        //For initial fragment display
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
 
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navlistener =
@@ -26,19 +36,19 @@ public class MainActivity extends AppCompatActivity {
                     switch (menuItem.getItemId())
                     {
                         case R.id.home:
-                            selectedFragment = new Fragment_home();
+                            selectedFragment = new HomeFragment();
                             break;
                         case R.id.c_m:
-                            selectedFragment = new Fragment_c_m();
+                            selectedFragment = new CropAndMarketFragment();
                             break;
                         case R.id.farmer:
-                            selectedFragment = new Fragment_farmerlist();
+                            selectedFragment = new FarmerListFragment();
                             break;
                         case R.id.profile:
-                            selectedFragment = new Fragment_profile();
+                            selectedFragment = new ProfileFragment();
                             break;
                         case R.id.service:
-                            selectedFragment = new Fragment_service();
+                            selectedFragment = new ServicesFragment();
                             break;
                     }
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();

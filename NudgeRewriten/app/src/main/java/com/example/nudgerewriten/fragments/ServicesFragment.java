@@ -1,4 +1,4 @@
-package com.example.nudgerewriten;
+package com.example.nudgerewriten.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,10 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class Fragment_farmerlist extends Fragment {
+import com.example.nudgerewriten.R;
+
+public class ServicesFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragement_farmerlist, container, false);
+        return inflater.inflate(R.layout.fragment_services, container, false);
     }
 }

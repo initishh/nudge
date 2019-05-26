@@ -1,15 +1,17 @@
-package com.example.nudgerewriten;
+package com.example.nudgerewriten.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-public class Shared {
+import com.example.nudgerewriten.R;
+
+public class SharedPrefUtils {
 
 
     SharedPreferences sharedPreferences;
     Context context;
 
-    public Shared(Context context) {
+    public SharedPrefUtils(Context context) {
         this.context = context;
         sharedPreferences = context.getSharedPreferences(context.getResources().getString(R.string.login_preference),context.MODE_PRIVATE);
     }
