@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">NudgeRewriten</string>
+    <string name="search_hint_farmer_list">Search for farmers…</string>
     <string name="login_preference">com.example.nudgerewriten.login_preference</string>
     <string name="login_status">com.example.nudgerewriten.login_status</string>
+    <string name="schedule_crops">Schedule Crop</string>
+    <string name="visit_store">Visit Store</string>
+
+    <!--Needs to remove later after intergration with backend just here for dummy purpose-->
+    <string-array name="dummy_array_for_spinner">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+    </string-array>
+    <!--Needs to remove later after intergration with backend just here for dummy purpose-->
 </resources>

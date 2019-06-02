@@ -20,4 +20,16 @@
         <item name="android:textSize">9dp</item>
     </style>
 
+    <style name="SearchView_Style" parent="Theme.AppCompat.Light">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="NormalText" parent="Theme.AppCompat.Light">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="colorAccent">@color/colorText</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
 </resources>

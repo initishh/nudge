@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/scheduleCropToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/schedule_crops"
+        app:titleMarginStart="0dp"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:titleTextAppearance="@style/SearchView_Style"
+        app:titleTextColor="#FFF">
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/scheduleCropToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="22dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusedByDefault="false"
+            android:theme="@style/NormalText"
+            android:focusableInTouchMode="true"
+            >
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/addCrop"
+                android:autofillHints="@string/schedule_crops"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/cardview_shadow_start_color"
+                app:layout_constraintTop_toBottomOf="@+id/addCrop"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/cropVariety"
+                app:layout_constraintTop_toBottomOf="@id/addCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/line_divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/cardview_shadow_start_color"
+                app:layout_constraintTop_toBottomOf="@+id/cropVariety"/>
+
+            <EditText
+                android:id="@+id/farmSize"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/line_divider1"
+                android:hint="Farm size"
+                android:theme="@style/NormalText"
+                android:inputType="numberDecimal"
+                />
+
+            <View
+                android:id="@+id/line_divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/cardview_shadow_start_color"
+                app:layout_constraintTop_toBottomOf="@+id/farmSize"/>
+
+            <EditText
+                android:id="@+id/seedingDate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="date"
+                app:layout_constraintTop_toBottomOf="@+id/line_divider2"
+                android:hint="Seeding Date..."
+                android:focusedByDefault="false"
+                />
+
+            <View
+                android:id="@+id/line_divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/cardview_shadow_start_color"
+                app:layout_constraintTop_toBottomOf="@+id/seedingDate"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="25dp"
+                android:background="@color/colorButton"
+                android:elevation="12dp"
+                android:fontFamily="@font/roboto_medium"
+                android:hint="SAVE"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:text="SAVE"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_divider3" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.design.card.MaterialCardView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorButton"
+        android:backgroundTint="@color/colorButton"
+        app:backgroundTint="@color/colorButton"
+        app:rippleColor="@color/colorPrimary"
+        android:src="@drawable/ic_add_black_24dp"
+        app:layout_constraintVertical_bias="0.976" />
+
+
+</android.support.constraint.ConstraintLayout>
