@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.support.design.widget.BottomNavigationView;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.example.nudgerewriten.R;
 import com.example.nudgerewriten.fragments.CropAndMarketFragment;
@@ -23,7 +25,13 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView botNav = findViewById(R.id.bottom_navigation);
         botNav.setOnNavigationItemSelectedListener(navlistener);
 
-        //For initial fragment display
+        // Setting the status bar color to PrimaryDark for all fragments
+
+        Window window = this.getWindow();
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(this.getResources().getColor(R.color.colorPrimaryDark));
+
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
 
     }
