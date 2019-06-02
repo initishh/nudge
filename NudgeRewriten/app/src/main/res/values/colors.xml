@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#7ED957</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorBackgroundFarmerList">#F9F9F9</color>
+    <color name="colorLineDivider">#EBEBEB</color>
+    <color name="colorText">#6D6D6D</color>
+    <color name="colorButton">#77D54F</color>
 </resources>

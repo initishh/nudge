@@ -18,6 +18,11 @@
         <activity android:name=".LoginActivity" android:theme="@style/AppTheme"/>
         <activity android:name=".MainActivity">
         </activity>
+        <activity android:name=".Activity_farmerlist_1" android:parentActivityName=".MainActivity" android:theme="@style/AppTheme1"></activity>
+        <activity
+            android:name=".Activity_schedule_crop"
+            android:parentActivityName=".Activity_farmerlist_1"
+            android:theme="@style/AppTheme1"/>
     </application>
 
 </manifest>
